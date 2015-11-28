@@ -1,8 +1,12 @@
-html body{
+html, body{
 	font-family: sans-serif;
+	margin: 0;
+	padding: 0;
 }
 
-
+.clear {
+	clear: both;
+}
 
 .header {
 	margin: 0 auto;
@@ -19,47 +23,40 @@ html body{
 
 .codePlayer {
 	height: 32px;
-	width: 33.3333%;
 	background-color: #EEEDEF;
 	float: left;
 	font-weight: 900;
 	padding-top: 8px;
 }
 
-.buttons {
-	height: 40px;
-	width: 33.3333%;
-	float: left;
-	background-color: #EEEDEF;
+.toggles {
+	height: 36px;
+	width: 300px;
+	margin: 0 auto;
+	/*background-color: #EEEDEF;*/
 	padding-left: 50px;
+	position: relative;
+	top: 4px;
 }
 
-ul {
-	margin-top: 4px;
-}
-
-li {
+.toggles li {
 	height: 23px;
 	padding: 7px 7px 0 7px;
 	float: left;
 	list-style: none;
 	border: 1px solid #776B5C;
-	background-color: #776B5C; /*will do something with hover or click later*/
-}
-
-li:hover {
-	background-color: #EEEDEF; 
+	/*background-color: #776B5C;*/ /*will do something with hover or click later*/
 }
 
 .run {
 	height: 40px;
-	width: 28.7%;
 	float: right;
 	background-color: #EEEDEF;
+	padding-right: 15px;
 }
 
 #run {
-	margin: 5px 0 0 80%;
+	margin: 5px 0 0 0;
 	height: 30px;
 	width: 50px;
 	border-radius: 7px;
@@ -69,7 +66,6 @@ li:hover {
 #html {
 	border-top-left-radius: 7px;
 	border-bottom-left-radius: 7px;
-	/*padding-left: 4px;*/ 
 }
 
 #result {
@@ -77,71 +73,40 @@ li:hover {
 	border-bottom-right-radius: 7px;
 }
 
-.htmlDiv {
-	height: 550px;
-	width: 25%;
-	/*border-left: 1px solid #D1CAC4;*/
-	border-bottom: 1px solid #D1CAC4;
+.codeContainer {
+	position: relative;
 	float: left;
+	width: 50%;
 }
 
-.cssDiv {
-	height: 550px;
-	width: 25%;
-	border-left: 1px solid #D1CAC4;
-	border-bottom: 1px solid #D1CAC4;
-	float: left;
+.codeContainer textarea {
+	width: 99%;
+	height: 100%;
+	border: none;
+	border-right: 1px solid #D1CAC4;
+	font-family: monotype;
+	font-size: 90%;
+	padding: 5px;
+	box-sizing: border-box;
 }
 
-.jsDiv {
-	height: 550px;
-	width: 25%;
-	border-left: 1px solid #D1CAC4;
-	border-bottom: 1px solid #D1CAC4;
-	float: left;
+.codeLabel {
+	position: absolute;
+	right: 10px;
+	top: 10px;
 }
 
-.resultDiv {
-	height: 550px;
-	width: 24.59%;
-	/*border-right: 1px solid #D1CAC4;*/
-	border-left: 1px solid #D1CAC4;
-	border-bottom: 1px solid #D1CAC4;
-	float: left;
+#CSSContainer, #JSContainer {
+	display: none;
 }
 
-#htmlLabel {
-	height: 20px;
-	width: 31px;
-	border: 1px solid #D1CAC4;
-	border-radius: 5px;
-	padding: 4px 5px 0 5px;
-	margin: 10px 0 0 83%;
+iframe {
+	height: 100%;
+	position: relative;
+	left: 20px;
+	border: none;
 }
 
-#cssLabel {
-	height: 20px;
-	width: 25px;
-	border: 1px solid #D1CAC4;
-	border-radius: 5px;
-	padding: 4px 5px 0 5px;
-	margin: 10px 0 0 85%;
-}
-
-#jsLabel {
-	height: 20px;
-	width: 13px;
-	border: 1px solid #D1CAC4;
-	border-radius: 5px;
-	padding: 4px 5px 0 5px;
-	margin: 10px 0 0 88%;
-}
-
-#resultLabel {
-	height: 20px;
-	width: 40px;
-	border: 1px solid #D1CAC4;
-	border-radius: 5px;
-	padding: 4px 5px 0 5px;
-	margin: 10px 0 0 81%;
+.selected {
+	background-color: #776B5C;
 }
